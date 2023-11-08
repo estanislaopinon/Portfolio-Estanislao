@@ -68,3 +68,9 @@ html {
     cursor: pointer;
     display: none;
 }
+
+/*INICIO*/
+.inicio{
+    background: linear-gradient(to top, rgba(30,35,35,.8), rgba(30,35,38,1)),
+    url(img/fondo.jpg)
+}
