@@ -12,6 +12,9 @@ html {
     scroll-behavior: smooth;
 }
 
+
+
+
 /*MENU CSS*/
 .contenedor-header {
     background: #1e2326;
@@ -36,7 +39,7 @@ html {
     /*modifica el logo con mi nombre*/
     font-family: 'Righteous';
     font-size: 36px;
-    color: #1cb698;
+    color: #1c97b6;
     text-decoration: none;
 }
 
@@ -55,13 +58,13 @@ html {
 }
 
 .contenedor-header header nav ul li a:hover {
-    color: #1cb698;
+    color: #1c97b6;
     /*al pasar por arriba de los items se cambia de color*/
 }
 
 .nav-responsive {
     /*modifica barra navegación derecha(VER SI FUNCIONA SIN ESTO)*/
-    background-color: #1cb698;
+    background-color: #1c97b6;
     color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
@@ -71,7 +74,7 @@ html {
 
 /*INICIO*/
 .inicio{
-    background: linear-gradient(to top, rgba(30,35,35,.8), rgba(30,35,38,1)),
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
     url(img/fondo.jpg);
     background-size: cover;
     height: 100vh;
@@ -90,7 +93,7 @@ html {
 }
 .inicio .contenido-banner img{
     margin-top: 40px;
-    border: 10px solid #1cb698;/*color del contorno de mi foto*/
+    border: 10px solid #1c97b6;/*color del contorno de mi foto*/
     display: block;
     width: 80%;
     margin: auto;
@@ -119,7 +122,7 @@ html {
     transition: .3s;
 }
 .inicio .contenido-banner .redes a:hover{/*animacion a color de los iconos redes sociales*/
-    background-color: #1cb698;
+    background-color: #1c97b6;
 }
 /*SOBRE MI*/
 .sobremi{
@@ -143,14 +146,14 @@ html {
     margin-bottom: 20px;
 }
 .sobremi .contenido-seccion p span{
-    color: #1cb698;
+    color: #1c97b6;
     font-weight: bold;
 }
 .sobremi .fila{
     display: flex;
 }
 .sobremi .fila .col{
-    width: 50px;
+    width: 50%;
 }
 .sobremi .fila .col h3{
     font-size: 28px;
@@ -160,4 +163,262 @@ html {
 .sobremi .fila .col ul{
     list-style: none;
 }
+.sobremi .fila .col ul li{
+    margin: 12px 0;
+}
+.sobremi .fila .col ul li strong{/*color de datos personales*/
+    display: inline-block;
+    color: #1c97b6;
+    width: 130px;
+}
+.sobremi .fila .col ul li span{
+    background-color: #1c97b6;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+}
 
+.sobremi .fila .col .contenedor-intereses{
+    display: flex;
+    flex-wrap: wrap;
+}
+.sobremi .fila .col .contenedor-intereses .interes{
+    width: 100px;
+    height: 100px;
+    background-color: #252A2E;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+.sobremi .fila .col .contenedor-intereses .interes:hover{
+    background-color: #1c97b6;
+}
+.sobremi .fila .col .contenedor-intereses .interes i{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.sobremi button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+.sobremi button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #1c97b6;
+    z-index: -1;
+    transition: 1s;
+}
+.sobremi button:hover .overlay{
+    width: 100%;
+}
+
+/*APARTADO SKILLS*/
+.skills{
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 20px;
+}
+.skills .contenedor-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.skills h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.skills .fila{
+    display: flex;
+}
+.skills .fila .col{
+    width: 50%;
+    padding: 0 20px;
+}
+.skills .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+.skills .skill > span{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+.skills .skill .barra-skill{
+    height: 8px;
+    width: 80%;
+    background-color: #131517;
+    position: relative;
+    margin-bottom: 30px;
+}
+.skills .skill .progreso{
+    background-color: #1c97b6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+}
+.skills .skill .barra-skill span{/*redondeles con progres skills*/
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: #1c97b6;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    top: -17px;
+    right: -15px;
+    font-size: 14px;
+}
+/*estas clases se agregaran dinamicamente mediante javascript*/
+.skills .skill .javascript{
+    width: 0%;
+    animation: 2s javascript forwards;
+}
+@keyframes javascript{
+    0%{width: 0%;}
+    100%{width: 75%;}
+}
+.skills .skill .htmlcss{
+    width: 0%;
+    animation: 2s jhtmlcss forwards;
+}
+@keyframes htmlcss{
+    0%{width: 0%;}
+    100%{width: 89%;}
+}
+.skills .skill .photoshop{
+    width: 0%;
+    animation: 2s photoshop forwards;
+}
+@keyframes photoshop{
+    0%{width: 0%;}
+    100%{width: 95%;}
+}
+.skills .skill .wordpress{
+    width: 0%;
+    animation: 2s wordpress forwards;
+}
+@keyframes wordpress{
+    0%{width: 0%;}
+    100%{width: 81%;}
+}
+.skills .skill .drupal{
+    width: 0%;
+    animation: 2s drupal forwards;
+}
+@keyframes drupal{
+    0%{width: 0%;}
+    100%{width: 55%;}
+}
+.skills .skill .comunicacion{
+    width: 0%;
+    animation: 2s comunicacion forwards;
+}
+@keyframes comunicacion{
+    0%{width: 0%;}
+    100%{width: 80%;}
+}
+.skills .skill .trabajo{
+    width: 0%;
+    animation: 2s trabajo forwards;
+}
+@keyframes trabajo{
+    0%{width: 0%;}
+    100%{width: 70%;}
+}
+.skills .skill .creatividad{
+    width: 0%;
+    animation: 2s creatividad forwards;
+}
+@keyframes creatividad{
+    0%{width: 0%;}
+    100%{width: 99%;}
+}
+.skills .skill .dedicacion{
+    width: 0%;
+    animation: 2s dedicacion forwards;
+}
+@keyframes dedicacion{
+    0%{width: 0%;}
+    100%{width: 65%;}
+}
+.skills .skill .proyect{
+    width: 0%;
+    animation: 2s proyect forwards;
+}
+@keyframes proyect{
+    0%{width: 0%;}
+    100%{width: 94%;}
+}
+/*SECCION PORTFOLIO*/
+.portfolio{
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 20px;
+}
+.portfolio .contenedor-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.portfolio h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.portfolio .galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.portfolio .galeria .proyecto{
+    position: relative;
+    max-width: 340px;
+    height: fit-content;
+    margin: 10px;
+    cursor: pointer;
+}
+.portfolio .galeria .proyecto img{
+    width: 100%;
+    display: block;
+}
+.portfolio .galeria .proyecto .overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(rgba(28,151,182,.8),rgba(28,151,182,.8));
+    display:flex ;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+    font-size: 18px;
+    letter-spacing: 3px;
+    opacity: 0;
+}
+.portfolio .galeria .proyecto .overlay h3{
+    margin-bottom: 20px;
+    transition: 1s;
+}
+.portfolio .galeria .proyecto .overlay:hover{
+    opacity: 1;
+}
